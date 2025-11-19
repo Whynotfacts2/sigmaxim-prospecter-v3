@@ -1,0 +1,44 @@
+# Cursor AI Rules for SigmaXim Prospecter V3
+
+## Project Overview
+This is an AI-powered prospecting tool for SigmaXim. The codebase is designed to be compatible with multiple AI platforms including Google AI Studio, Cursor, GitHub Copilot, and other AI assistants.
+
+## Code Style Guidelines
+- Follow PEP 8 for Python code
+- Use type hints for all function parameters and return values
+- Write comprehensive docstrings for all modules, classes, and functions
+- Keep functions small and focused (single responsibility principle)
+- Use meaningful variable and function names
+
+## Architecture Principles
+- Modular design: Each component should be independent and reusable
+- Clear separation of concerns
+- Configuration-driven approach
+- Proper error handling and logging
+- Security-first mindset (no hardcoded credentials)
+
+## File Organization
+- `/src` - Main source code
+- `/tests` - Test files
+- `/docs` - Documentation
+- `/config` - Configuration files
+- `/scripts` - Utility scripts
+
+## AI Assistance Guidelines
+- When making changes, preserve existing functionality
+- Add comprehensive comments for complex logic
+- Follow the established patterns in the codebase
+- Update documentation when making significant changes
+- Run tests before committing changes
+
+## Testing Requirements
+- Write unit tests for new functionality
+- Ensure test coverage for critical paths
+- Use descriptive test names
+- Mock external dependencies
+
+## Security Best Practices
+- Never commit API keys or secrets
+- Use environment variables for sensitive data
+- Validate and sanitize all inputs
+- Follow principle of least privilege
