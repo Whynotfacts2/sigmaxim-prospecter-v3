@@ -3,8 +3,6 @@
 These tests verify the functionality of helper functions in the utils module.
 """
 
-import pytest
-
 from src.utils.helpers import (
     chunk_list,
     deep_merge,

@@ -26,8 +26,8 @@ __author__ = "SigmaXim Team"
 __license__ = "MIT"
 
 # Package-level imports for convenience
-from src.core.prospecter import Prospecter
 from src.config.settings import Settings
+from src.core.prospecter import Prospecter
 
 __all__ = [
     "Prospecter",

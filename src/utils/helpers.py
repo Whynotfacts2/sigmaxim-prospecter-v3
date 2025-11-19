@@ -11,7 +11,7 @@ All utilities are designed to be:
 """
 
 import logging
-from typing import Any, Dict, List, Optional
+from typing import Any, Optional
 
 
 def setup_logging(log_level: str = "INFO") -> logging.Logger:
@@ -126,7 +126,7 @@ def format_currency(amount: float, currency: str = "USD") -> str:
     return f"{symbol}{amount:,.2f}"
 
 
-def chunk_list(items: List[Any], chunk_size: int) -> List[List[Any]]:
+def chunk_list(items: list[Any], chunk_size: int) -> list[list[Any]]:
     """Split a list into smaller chunks.
 
     Useful for batch processing and pagination.
@@ -145,7 +145,7 @@ def chunk_list(items: List[Any], chunk_size: int) -> List[List[Any]]:
     return [items[i : i + chunk_size] for i in range(0, len(items), chunk_size)]
 
 
-def deep_merge(dict1: Dict[str, Any], dict2: Dict[str, Any]) -> Dict[str, Any]:
+def deep_merge(dict1: dict[str, Any], dict2: dict[str, Any]) -> dict[str, Any]:
     """Deep merge two dictionaries.
 
     Recursively merges dict2 into dict1. If both values are dicts, merge them.
@@ -175,7 +175,7 @@ def deep_merge(dict1: Dict[str, Any], dict2: Dict[str, Any]) -> Dict[str, Any]:
     return result
 
 
-def safe_get(dictionary: Dict[str, Any], key_path: str, default: Any = None) -> Any:
+def safe_get(dictionary: dict[str, Any], key_path: str, default: Any = None) -> Any:
     """Safely get nested dictionary value using dot notation.
 
     Args:

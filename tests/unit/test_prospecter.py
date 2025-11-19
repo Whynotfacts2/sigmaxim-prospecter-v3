@@ -4,8 +4,6 @@ These tests verify the functionality of the main Prospecter class and
 related components. All external dependencies are mocked.
 """
 
-import pytest
-
 from src.core.prospecter import Lead, Prospecter
 
 
@@ -117,9 +115,7 @@ class TestProspecter:
     def test_run_workflow_with_custom_leads(self) -> None:
         """Test workflow with custom lead list."""
         prospecter = Prospecter()
-        custom_leads = [
-            Lead(name=f"Company {i}", email=f"test{i}@example.com") for i in range(5)
-        ]
+        custom_leads = [Lead(name=f"Company {i}", email=f"test{i}@example.com") for i in range(5)]
 
         results = prospecter.run(leads=custom_leads, min_score=0.5)
 

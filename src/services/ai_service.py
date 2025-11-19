@@ -16,7 +16,7 @@ Example:
 """
 
 from enum import Enum
-from typing import Any, Dict, Optional
+from typing import Any, Optional
 
 from src.config.settings import get_settings
 from src.utils.helpers import setup_logging
@@ -121,7 +121,7 @@ class AIService:
         self.logger.debug(f"Generated response length: {len(response)}")
         return response
 
-    def analyze_lead(self, lead_data: Dict[str, Any]) -> Dict[str, Any]:
+    def analyze_lead(self, lead_data: dict[str, Any]) -> dict[str, Any]:
         """Analyze lead data using AI.
 
         Args:

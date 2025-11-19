@@ -16,8 +16,7 @@ Example:
     >>> results = prospecter.run()
 """
 
-import logging
-from typing import Any, Dict, List, Optional
+from typing import Any, Optional
 
 from src.config.settings import get_settings
 from src.utils.helpers import setup_logging
@@ -43,7 +42,7 @@ class Lead:
         id: Optional[str] = None,
         industry: Optional[str] = None,
         company_size: Optional[int] = None,
-        metadata: Optional[Dict[str, Any]] = None,
+        metadata: Optional[dict[str, Any]] = None,
     ) -> None:
         """Initialize a Lead instance.
 
@@ -74,7 +73,7 @@ class Lead:
 
         return str(uuid.uuid4())
 
-    def to_dict(self) -> Dict[str, Any]:
+    def to_dict(self) -> dict[str, Any]:
         """Convert lead to dictionary representation.
 
         Returns:
@@ -151,7 +150,7 @@ class Prospecter:
 
         return score
 
-    def process_leads(self, leads: List[Lead]) -> List[Lead]:
+    def process_leads(self, leads: list[Lead]) -> list[Lead]:
         """Process a list of leads.
 
         Scores each lead and returns them sorted by score (highest first).
@@ -181,9 +180,9 @@ class Prospecter:
 
     def run(
         self,
-        leads: Optional[List[Lead]] = None,
+        leads: Optional[list[Lead]] = None,
         min_score: float = 0.0,
-    ) -> Dict[str, Any]:
+    ) -> dict[str, Any]:
         """Run the main prospecting workflow.
 
         This is the main entry point for the prospecting process.
@@ -231,7 +230,7 @@ class Prospecter:
 
         return results
 
-    def _generate_sample_leads(self) -> List[Lead]:
+    def _generate_sample_leads(self) -> list[Lead]:
         """Generate sample leads for testing.
 
         Returns:
